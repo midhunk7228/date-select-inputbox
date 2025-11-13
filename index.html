@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Date Input</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="demo">
+        <header class="demo__header">
+          <h1 class="demo__title">Inline Date Input</h1>
+          <p class="demo__subtitle">
+            Type, arrow through segments, or use ↑ ↓ to adjust the day, month, or year.
+          </p>
+        </header>
+
+        <label class="date-field">
+          <span class="date-field__label">Date</span>
+          <div
+            id="dateInput"
+            class="date-input"
+            role="group"
+            aria-label="Custom date input"
+            tabindex="0"
+          >
+            <span class="date-input__segment" data-segment="day">03</span>
+            <span class="date-input__separator">/</span>
+            <span class="date-input__segment" data-segment="month">02</span>
+            <span class="date-input__separator">/</span>
+            <span class="date-input__segment" data-segment="year">2025</span>
+          </div>
+        </label>
+
+        <output id="liveDate" class="demo__output" aria-live="polite">
+          Selected date: 03/02/2025
+        </output>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
